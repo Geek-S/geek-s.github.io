@@ -1,0 +1,4 @@
+baseURL = "https://geek-s.gitee.io/"
+languageCode = "en-us"
+title = "Geek-S`s Blog"
+theme = "hugo-clarity"
