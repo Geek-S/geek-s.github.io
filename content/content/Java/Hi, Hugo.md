@@ -22,7 +22,7 @@ https://gohugo.io/getting-started/quick-start
 https://github.com/chipzoller/hugo-clarity
 ```
 
-## 参考
+# 参考
 
 - [gohugo.io/getting-started/quick-start](https://gohugo.io/getting-started/quick-start)
 - [themes.gohugo.io](https://themes.gohugo.io)
