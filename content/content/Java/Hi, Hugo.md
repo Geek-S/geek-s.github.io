@@ -4,6 +4,8 @@ date: 2021-12-26T16:41:28+08:00
 draft: false
 tags: ["hugo"]
 categories: ["GS"]
+
+showShare: false
 ---
 
 # Quick start
