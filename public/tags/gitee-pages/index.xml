@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gitee pages on Geek-S`s Blog</title>
+    <link>https://geek-s.gitee.io/tags/gitee-pages/</link>
+    <description>Recent content in gitee pages on Geek-S`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Dec 2021 23:30:28 +0800</lastBuildDate><atom:link href="https://geek-s.gitee.io/tags/gitee-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hi, Gitee Pages</title>
+      <link>https://geek-s.gitee.io/content/java/hi-gitee-pages/</link>
+      <pubDate>Tue, 28 Dec 2021 23:30:28 +0800</pubDate>
+      
+      <guid>https://geek-s.gitee.io/content/java/hi-gitee-pages/</guid>
+      <description>
+        
+          
+            Quick start 1. 新建仓库 2. 点击Giee Pages      3. 填写申请表单，提交 4. 审核通过后，可正常使用 参考  Gitee帮助中心-Gitee Pages  
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
