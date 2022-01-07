@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Geek-S</title>
-    <link>https://geek-s.gitee.io/</link>
-    <description>Recent content on Geek-S</description>
+    <title>Java Foundation on Geek-S</title>
+    <link>https://geek-s.gitee.io/categories/java-foundation/</link>
+    <description>Recent content in Java Foundation on Geek-S</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Jan 2022 20:55:28 +0800</lastBuildDate><atom:link href="https://geek-s.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Jan 2022 20:55:28 +0800</lastBuildDate><atom:link href="https://geek-s.gitee.io/categories/java-foundation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MapStruct</title>
       <link>https://geek-s.gitee.io/java-foundation/mapstruct/</link>

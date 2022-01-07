@@ -1,8 +1,8 @@
 
 <!DOCTYPE html>
-<html lang="en" data-figures="">
+<html lang="en" data-figures="" class="page">
   <head>
-<title>Categories | Geek-S</title>
+<title>Lombok | Geek-S</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,21 +10,20 @@
 <meta property="og:locale" content="en" />
 
 <meta property="og:type" content="article">
-<meta name="description" content="">
+<meta name="description" content="在项目中，会有各种实体，如Entity、Request、Response等，在不使用外部组件支持的情况下，需要为每个属性生成Getter、Setter、ToString等，Controller、Service中打印日志，使用@SLF4J可以直接注入log实例，不需要在代码中显示的声明，下面会对Lombok的接入和常用注 …">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="">
-<meta name="twitter:title" content="Categories" />
-<meta property="og:url" content="https://geek-s.gitee.io/categories/" />
-<meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
+<meta name="twitter:title" content="Lombok" />
+<meta property="og:url" content="https://geek-s.gitee.io/java-foundation/lombok/" />
+<meta property="og:title" content="Lombok" />
+<meta property="og:description" content="在项目中，会有各种实体，如Entity、Request、Response等，在不使用外部组件支持的情况下，需要为每个属性生成Getter、Setter、ToString等，Controller、Service中打印日志，使用@SLF4J可以直接注入log实例，不需要在代码中显示的声明，下面会对Lombok的接入和常用注 …" />
 <meta property="og:image" content="https://geek-s.gitee.io/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://geek-s.gitee.io/icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://geek-s.gitee.io/icons/favicon-32x32.png">
 <link rel="manifest" href="https://geek-s.gitee.io/icons/site.webmanifest">
 
-<link rel="canonical" href="https://geek-s.gitee.io/categories/">
-<link rel="alternate" type="application/rss+xml" href="https://geek-s.gitee.io/categories/index.xml" title="Geek-S" />
+<link rel="canonical" href="https://geek-s.gitee.io/java-foundation/lombok/">
 
     
 
@@ -74,171 +73,237 @@
 </header>
 
     <main>
-
+  
 <div class="grid-inverse wrap content">
-  <ul class="posts" id="posts">
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://geek-s.gitee.io/categories/java-foundation/" title="Java Foundation">Java Foundation</a>
-      </h3>
-      
+  <article class="post_content">
+    <h1 class="post_title">Lombok</h1>
   <div class="post_meta">
     <span><svg class="icon">
   <use xlink:href="#calendar"></use>
 </svg></span>
     <span class="post_date">
       Jan 1, 2022</span>
-    <span class="post_time"> · 0 min read</span>
-    <span class="page_only">&nbsp;·
-  <div class="post_share">
-    Share on:
-    <a href="https://twitter.com/intent/tweet?text=Java%20Foundation&url=https%3a%2f%2fgeek-s.gitee.io%2fcategories%2fjava-foundation%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
-      <svg class="icon">
-  <use xlink:href="#twitter"></use>
-</svg>
-    </a>
-    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fgeek-s.gitee.io%2fcategories%2fjava-foundation%2f&t=Java%20Foundation" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
-      <svg class="icon">
-  <use xlink:href="#facebook"></use>
-</svg>
-    </a>
-    <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow">
-      <svg class="icon">
-  <use xlink:href="#linkedin"></use>
-</svg>
-    </a>
-    <a href="https://geek-s.gitee.io/categories/java-foundation/" title="Copy Link" class="link link_yank">
-      <svg class="icon">
-  <use xlink:href="#copy"></use>
-</svg>
-    </a>
-  </div>
-  </span>
+    <span class="post_time"> · 3 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/java' title="java" class="post_tag button button_translucent">java
+        </a>
+    </span>
   </div>
 
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">
-            
-          </p>
-          <a href="https://geek-s.gitee.io/categories/java-foundation/" title="Read More" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
 
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://geek-s.gitee.io/categories/dev-ops/" title="Dev Ops">Dev Ops</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg></span>
-    <span class="post_date">
-      Dec 30, 2021</span>
-    <span class="post_time"> · 0 min read</span>
-    <span class="page_only">&nbsp;·
-  <div class="post_share">
-    Share on:
-    <a href="https://twitter.com/intent/tweet?text=Dev%20Ops&url=https%3a%2f%2fgeek-s.gitee.io%2fcategories%2fdev-ops%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
-      <svg class="icon">
-  <use xlink:href="#twitter"></use>
-</svg>
-    </a>
-    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fgeek-s.gitee.io%2fcategories%2fdev-ops%2f&t=Dev%20Ops" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
-      <svg class="icon">
-  <use xlink:href="#facebook"></use>
-</svg>
-    </a>
-    <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow">
-      <svg class="icon">
-  <use xlink:href="#linkedin"></use>
-</svg>
-    </a>
-    <a href="https://geek-s.gitee.io/categories/dev-ops/" title="Copy Link" class="link link_yank">
-      <svg class="icon">
-  <use xlink:href="#copy"></use>
-</svg>
-    </a>
-  </div>
-  </span>
-  </div>
+
+
+    
+    <div class="post_body"><p>在项目中，会有各种实体，如Entity、Request、Response等，在不使用外部组件支持的情况下，需要为每个属性生成Getter、Setter、ToString等，Controller、Service中打印日志，使用@SLF4J可以直接注入log实例，不需要在代码中显示的声明，下面会对Lombok的接入和常用注解进行详细说明</p>
+<h1 id="installtutorialsbaeldunghttpswwwbaeldungcomlombok-ide">Install（<a href="https://www.baeldung.com/lombok-ide">tutorials@baeldung</a>）</h1>
+<ol>
+<li>
+<p>Go to File &gt; Settings &gt; Plugins</p>
+</li>
+<li>
+<p>Click on Browse repositories&hellip;</p>
+</li>
+<li>
+<p>Search for Lombok Plugin</p>
+</li>
+<li>
+<p>Click on Install plugin</p>
+</li>
+<li>
+<p>Restart IntelliJ IDEA</p>
+</li>
+</ol>
+<h1 id="features">Features</h1>
+<h2 id="getter-and-settersee-projectlombokorghttpsprojectlombokorgfeaturesgettersetter">@Getter and @Setter（<a href="https://projectlombok.org/features/GetterSetter">@see projectlombok.org</a>）</h2>
+<p>📍 私有属性生成Getter、Setter，可以在类上，也可以在属性上</p>
+<p>With Lombok</p>
+<pre><code>import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
+
+public class GetterSetterExample {
+  /**
+   * Age of the person. Water is wet.
+   * 
+   * @param age New value for this person's age. Sky is blue.
+   * @return The current value of this person's age. Circles are round.
+   */
+  @Getter @Setter private int age = 10;
+  
+  /**
+   * Name of the person.
+   * -- SETTER --
+   * Changes the name of this person.
+   * 
+   * @param name The new value.
+   */
+  @Setter(AccessLevel.PROTECTED) private String name;
+  
+  @Override public String toString() {
+    return String.format(&quot;%s (age: %d)&quot;, name, age);
+  }
+}
+</code></pre><p>Vanilla Java</p>
+<pre><code>public class GetterSetterExample {
+  /**
+   * Age of the person. Water is wet.
+   */
+  private int age = 10;
+
+  /**
+   * Name of the person.
+   */
+  private String name;
+  
+  @Override public String toString() {
+    return String.format(&quot;%s (age: %d)&quot;, name, age);
+  }
+  
+  /**
+   * Age of the person. Water is wet.
+   *
+   * @return The current value of this person's age. Circles are round.
+   */
+  public int getAge() {
+    return age;
+  }
+  
+  /**
+   * Age of the person. Water is wet.
+   *
+   * @param age New value for this person's age. Sky is blue.
+   */
+  public void setAge(int age) {
+    this.age = age;
+  }
+  
+  /**
+   * Changes the name of this person.
+   *
+   * @param name The new value.
+   */
+  protected void setName(String name) {
+    this.name = name;
+  }
+}
+</code></pre><h2 id="tostringsee-projectlombokorghttpsprojectlombokorgfeaturestostring">@ToString（<a href="https://projectlombok.org/features/ToString">@see projectlombok.org</a>）</h2>
+<p>📍 生成toString函数，标注在类上</p>
+<p>With Lombok</p>
+<pre><code>import lombok.ToString;
+
+@ToString
+public class ToStringExample {
+  private static final int STATIC_VAR = 10;
+  private String name;
+  private Shape shape = new Square(5, 10);
+  private String[] tags;
+  @ToString.Exclude private int id;
+  
+  public String getName() {
+    return this.name;
+  }
+  
+  @ToString(callSuper=true, includeFieldNames=true)
+  public static class Square extends Shape {
+    private final int width, height;
+    
+    public Square(int width, int height) {
+      this.width = width;
+      this.height = height;
+    }
+  }
+}
+</code></pre><p>Vanilla Java</p>
+<pre><code>import java.util.Arrays;
+
+public class ToStringExample {
+  private static final int STATIC_VAR = 10;
+  private String name;
+  private Shape shape = new Square(5, 10);
+  private String[] tags;
+  private int id;
+  
+  public String getName() {
+    return this.name;
+  }
+  
+  public static class Square extends Shape {
+    private final int width, height;
+    
+    public Square(int width, int height) {
+      this.width = width;
+      this.height = height;
+    }
+    
+    @Override public String toString() {
+      return &quot;Square(super=&quot; + super.toString() + &quot;, width=&quot; + this.width + &quot;, height=&quot; + this.height + &quot;)&quot;;
+    }
+  }
+  
+  @Override public String toString() {
+    return &quot;ToStringExample(&quot; + this.getName() + &quot;, &quot; + this.shape + &quot;, &quot; + Arrays.deepToString(this.tags) + &quot;)&quot;;
+  }
+}
+</code></pre><h2 id="noargsconstructor-requiredargsconstructor-allargsconstructorsee-projectlombokorghttpsprojectlombokorgfeaturesconstructor">@NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor<a href="https://projectlombok.org/features/constructor">@see projectlombok.org</a>）</h2>
+<p>📍 生成无参数、指定参数、全参数构造器（⚠️ 注意：如果使用有参构造器，尽量添加无参构造器，因为框架在初始化类时会用到，如反序列化）</p>
+<p>With Lombok</p>
+<pre><code>import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.NonNull;
+
+@RequiredArgsConstructor(staticName = &quot;of&quot;)
+@AllArgsConstructor(access = AccessLevel.PROTECTED)
+public class ConstructorExample&lt;T&gt; {
+  private int x, y;
+  @NonNull private T description;
+  
+  @NoArgsConstructor
+  public static class NoArgsExample {
+    @NonNull private String field;
+  }
+}
+</code></pre><p>Vanilla Java</p>
+<pre><code>public class ConstructorExample&lt;T&gt; {
+  private int x, y;
+  @NonNull private T description;
+  
+  private ConstructorExample(T description) {
+    if (description == null) throw new NullPointerException(&quot;description&quot;);
+    this.description = description;
+  }
+  
+  public static &lt;T&gt; ConstructorExample&lt;T&gt; of(T description) {
+    return new ConstructorExample&lt;T&gt;(description);
+  }
+  
+  @java.beans.ConstructorProperties({&quot;x&quot;, &quot;y&quot;, &quot;description&quot;})
+  protected ConstructorExample(int x, int y, T description) {
+    if (description == null) throw new NullPointerException(&quot;description&quot;);
+    this.x = x;
+    this.y = y;
+    this.description = description;
+  }
+  
+  public static class NoArgsExample {
+    @NonNull private String field;
+    
+    public NoArgsExample() {
+    }
+  }
+}
+</code></pre><h1 id="参考">参考</h1>
+<ul>
+<li><a href="https://projectlombok.org">projectlombok.org</a></li>
+</ul>
 
     </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">
-            
-          </p>
-          <a href="https://geek-s.gitee.io/categories/dev-ops/" title="Read More" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
+<div class="post_comments">
+  
+  
+</div>
 
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://geek-s.gitee.io/categories/gs/" title="GS">GS</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg></span>
-    <span class="post_date">
-      Dec 28, 2021</span>
-    <span class="post_time"> · 0 min read</span>
-    <span class="page_only">&nbsp;·
-  <div class="post_share">
-    Share on:
-    <a href="https://twitter.com/intent/tweet?text=GS&url=https%3a%2f%2fgeek-s.gitee.io%2fcategories%2fgs%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
-      <svg class="icon">
-  <use xlink:href="#twitter"></use>
-</svg>
-    </a>
-    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fgeek-s.gitee.io%2fcategories%2fgs%2f&t=GS" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
-      <svg class="icon">
-  <use xlink:href="#facebook"></use>
-</svg>
-    </a>
-    <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow">
-      <svg class="icon">
-  <use xlink:href="#linkedin"></use>
-</svg>
-    </a>
-    <a href="https://geek-s.gitee.io/categories/gs/" title="Copy Link" class="link link_yank">
-      <svg class="icon">
-  <use xlink:href="#copy"></use>
-</svg>
-    </a>
-  </div>
-  </span>
-  </div>
 
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">
-            
-          </p>
-          <a href="https://geek-s.gitee.io/categories/gs/" title="Read More" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
 
-    <li>
-    </li>
-  </ul>
+  </article>
 <aside class="sidebar">
   <section class="sidebar_inner">
     
@@ -246,9 +311,6 @@
     <ul class="flex-column">
       <li>
         <a href="https://geek-s.gitee.io/java-foundation/mapstruct/" class="nav-link" title="MapStruct">MapStruct</a>
-      </li>
-      <li>
-        <a href="https://geek-s.gitee.io/java-foundation/lombok/" class="nav-link" title="Lombok">Lombok</a>
       </li>
       <li>
         <a href="https://geek-s.gitee.io/java-foundation/javafoundation/" class="nav-link" title="Java Foundation">Java Foundation</a>
@@ -309,9 +371,8 @@
   </section>
 </aside>
 
+  
 </div>
-
-
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
     <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>

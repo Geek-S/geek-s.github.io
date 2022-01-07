@@ -3,13 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://geek-s.gitee.io/categories/</loc>
-    <lastmod>2021-12-28T23:30:28+08:00</lastmod>
-  </url><url>
-    <loc>https://geek-s.gitee.io/content/</loc>
-    <lastmod>2021-12-28T23:30:28+08:00</lastmod>
+    <lastmod>2022-01-01T20:55:28+08:00</lastmod>
   </url><url>
     <loc>https://geek-s.gitee.io/</loc>
-    <lastmod>2021-12-28T23:30:28+08:00</lastmod>
+    <lastmod>2022-01-01T20:55:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/tags/java/</loc>
+    <lastmod>2022-01-01T20:55:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/categories/java-foundation/</loc>
+    <lastmod>2022-01-01T20:55:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/java-foundation/</loc>
+    <lastmod>2022-01-01T20:55:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/java-foundation/mapstruct/</loc>
+    <lastmod>2022-01-01T20:55:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/tags/</loc>
+    <lastmod>2022-01-01T20:55:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/java-foundation/lombok/</loc>
+    <lastmod>2022-01-01T20:54:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/java-foundation/javafoundation/</loc>
+    <lastmod>2022-01-01T20:53:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/dev-ops/curl/</loc>
+    <lastmod>2021-12-30T23:04:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/tags/curl/</loc>
+    <lastmod>2021-12-30T23:04:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/categories/dev-ops/</loc>
+    <lastmod>2021-12-30T23:04:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/dev-ops/</loc>
+    <lastmod>2021-12-30T23:04:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/tags/%E6%97%A0%E6%8D%9F%E5%8F%91%E5%B8%83/</loc>
+    <lastmod>2021-12-30T23:04:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/dev-ops/-gracefuldeployment/</loc>
+    <lastmod>2021-12-30T23:04:28+08:00</lastmod>
   </url><url>
     <loc>https://geek-s.gitee.io/tags/gitee-pages/</loc>
     <lastmod>2021-12-28T23:30:28+08:00</lastmod>
@@ -17,13 +53,13 @@
     <loc>https://geek-s.gitee.io/categories/gs/</loc>
     <lastmod>2021-12-28T23:30:28+08:00</lastmod>
   </url><url>
-    <loc>https://geek-s.gitee.io/content/java/hi-gitee-pages/</loc>
+    <loc>https://geek-s.gitee.io/gs/</loc>
     <lastmod>2021-12-28T23:30:28+08:00</lastmod>
   </url><url>
-    <loc>https://geek-s.gitee.io/tags/</loc>
+    <loc>https://geek-s.gitee.io/gs/higiteepages/</loc>
     <lastmod>2021-12-28T23:30:28+08:00</lastmod>
   </url><url>
-    <loc>https://geek-s.gitee.io/content/java/hi-hugo/</loc>
+    <loc>https://geek-s.gitee.io/gs/hihugo/</loc>
     <lastmod>2021-12-26T16:41:28+08:00</lastmod>
   </url><url>
     <loc>https://geek-s.gitee.io/tags/hugo/</loc>
