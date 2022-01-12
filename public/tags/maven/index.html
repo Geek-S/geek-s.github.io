@@ -1,8 +1,8 @@
 
 <!DOCTYPE html>
-<html lang="en" data-figures="" class="page">
+<html lang="en" data-figures="">
   <head>
-<title>Hi, Hugo | Geek-S</title>
+<title>maven | Geek-S</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,20 +10,21 @@
 <meta property="og:locale" content="en" />
 
 <meta property="og:type" content="article">
-<meta name="description" content="Quick start 安装Hugo https://gohugo.io/getting-started/quick-start 本站主题 https://github.com/chipzoller/hugo-clarity 参考  gohugo.io/getting-started/quick-start …">
+<meta name="description" content="">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="">
-<meta name="twitter:title" content="Hi, Hugo" />
-<meta property="og:url" content="https://geek-s.gitee.io/gs/hihugo/" />
-<meta property="og:title" content="Hi, Hugo" />
-<meta property="og:description" content="Quick start 安装Hugo https://gohugo.io/getting-started/quick-start 本站主题 https://github.com/chipzoller/hugo-clarity 参考  gohugo.io/getting-started/quick-start …" />
+<meta name="twitter:title" content="maven" />
+<meta property="og:url" content="https://geek-s.gitee.io/tags/maven/" />
+<meta property="og:title" content="maven" />
+<meta property="og:description" content="" />
 <meta property="og:image" content="https://geek-s.gitee.io/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://geek-s.gitee.io/icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://geek-s.gitee.io/icons/favicon-32x32.png">
 <link rel="manifest" href="https://geek-s.gitee.io/icons/site.webmanifest">
 
-<link rel="canonical" href="https://geek-s.gitee.io/gs/hihugo/">
+<link rel="canonical" href="https://geek-s.gitee.io/tags/maven/">
+<link rel="alternate" type="application/rss+xml" href="https://geek-s.gitee.io/tags/maven/index.xml" title="Geek-S" />
 
     
 
@@ -73,45 +74,48 @@
 </header>
 
     <main>
-  
+
 <div class="grid-inverse wrap content">
-  <article class="post_content">
-    <h1 class="post_title">Hi, Hugo</h1>
+  <ul class="posts" id="posts">
+      <li class="post_item">
+  <div class="excerpt">
+    <div class="excerpt_header">
+      <h3 class="post_link">
+        <a href="https://geek-s.gitee.io/java-foundation/mavenpluginflatten/" title="Flatten Maven Plugin">Flatten Maven Plugin</a>
+      </h3>
+      
   <div class="post_meta">
     <span><svg class="icon">
   <use xlink:href="#calendar"></use>
 </svg></span>
     <span class="post_date">
-      Dec 26, 2021</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/hugo' title="hugo" class="post_tag button button_translucent">hugo
+      Jan 11, 2022</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/java' title="java" class="post_tag button button_translucent">java
+        </a><a href='https://geek-s.gitee.io/tags/maven' title="maven" class="post_tag button button_translucent">maven
         </a>
     </span>
   </div>
 
-
-
-
-    
-    <div class="post_body"><h1 id="quick-start">Quick start</h1>
-<h2 id="安装hugo">安装Hugo</h2>
-<pre><code>https://gohugo.io/getting-started/quick-start
-</code></pre><h2 id="本站主题">本站主题</h2>
-<pre><code>https://github.com/chipzoller/hugo-clarity
-</code></pre><h1 id="参考">参考</h1>
-<ul>
-<li><a href="https://gohugo.io/getting-started/quick-start">gohugo.io/getting-started/quick-start</a></li>
-<li><a href="https://themes.gohugo.io">themes.gohugo.io</a></li>
-</ul>
-
     </div>
-<div class="post_comments">
-  
-  
-</div>
+      <div class="excerpt_footer">
+        <div>
+          <p class="pale">
+            
+              PS：Version：1.2.2
+场景 在进行多模块开发时，会在父级pom中定义统一版本号，如果直接进行打包，会直接将变量带入pom/jar中，导致无法正常使用，使用flatten-maven-plugin，会在打包前执行flatten:flatten，会将变量替换成实际值
+示例
+&lt;build&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt; &lt;artifactId&gt;flatten-maven-plugin&lt;/artifactId&gt; …
+            
+          </p>
+          <a href="https://geek-s.gitee.io/java-foundation/mavenpluginflatten/" title="Read More" class="excerpt_more button">Read More</a>
+        </div>
+      </div>
+    </div>
+  </li>
 
-
-
-  </article>
+    <li>
+    </li>
+  </ul>
 <aside class="sidebar">
   <section class="sidebar_inner">
     
@@ -190,8 +194,9 @@
   </section>
 </aside>
 
-  
 </div>
+
+
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
     <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>

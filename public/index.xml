@@ -6,7 +6,36 @@
     <description>Recent content on Geek-S</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Jan 2022 20:55:28 +0800</lastBuildDate><atom:link href="https://geek-s.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jan 2022 21:08:28 +0800</lastBuildDate><atom:link href="https://geek-s.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flatten Maven Plugin</title>
+      <link>https://geek-s.gitee.io/java-foundation/mavenpluginflatten/</link>
+      <pubDate>Tue, 11 Jan 2022 21:08:28 +0800</pubDate>
+      
+      <guid>https://geek-s.gitee.io/java-foundation/mavenpluginflatten/</guid>
+      <description>
+        
+          
+            PS：Version：1.2.2
+场景 在进行多模块开发时，会在父级pom中定义统一版本号，如果直接进行打包，会直接将变量带入pom/jar中，导致无法正常使用，使用flatten-maven-plugin，会在打包前执行flatten:flatten，会将变量替换成实际值
+示例
+&amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.codehaus.mojo&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;flatten-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${maven-flatten-version}&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;!-- 打包使用生成的pom --&amp;gt; &amp;lt;updatePomFile&amp;gt;true&amp;lt;/updatePomFile&amp;gt; &amp;lt;!-- 仅处理revision、sha1、changelist变量 --&amp;gt; &amp;lt;flattenMode&amp;gt;resolveCiFriendliesOnly&amp;lt;/flattenMode&amp;gt; &amp;lt;!-- 为依赖添加版本号 --&amp;gt; &amp;lt;pomElements&amp;gt; &amp;lt;dependencies&amp;gt;expand&amp;lt;/dependencies&amp;gt; &amp;lt;/pomElements&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;executions&amp;gt; &amp;lt;execution&amp;gt; &amp;lt;id&amp;gt;flatten&amp;lt;/id&amp;gt; &amp;lt;phase&amp;gt;process-resources&amp;lt;/phase&amp;gt; &amp;lt;goals&amp;gt; &amp;lt;goal&amp;gt;flatten&amp;lt;/goal&amp;gt; &amp;lt;/goals&amp;gt; &amp;lt;/execution&amp;gt; &amp;lt;execution&amp;gt; &amp;lt;id&amp;gt;flatten.clean&amp;lt;/id&amp;gt; &amp;lt;phase&amp;gt;clean&amp;lt;/phase&amp;gt; &amp;lt;goals&amp;gt; &amp;lt;goal&amp;gt;clean&amp;lt;/goal&amp;gt; &amp;lt;/goals&amp;gt; &amp;lt;/execution&amp;gt; &amp;lt;/executions&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt; Goals flatten:clean 删除flatten:flatten生成的文件
+flatten:flatten 生成新的pom文件，并将项目的pom指向该文件
+可选参数 embedBuildProfileDependencies 如果为true，则除根据os和jdk来激活的profile外的将被移除，如果是被激活的profile的dependencies将会直接放入pom中（默认false）
+flattenDependencyMode direct 仅处理直接依赖的版本（默认）
+all	处理直接和传递依赖，将传递依赖转化成直接依赖（配置flattenMode后，不再生效）
+可通过flatten.dependency.mode属性配置
+flattenMode ossrh 保留所有OSS Repository-Hosting需要的可选节点
+bom 除ossrh外，保留dependencyManagement和properties节点，
+defaults 移除所有可选的pom节点，除repositories外
+resolveCiFriendliesOnly 仅处理revision、sha1、changelist变量
+可通过flatten.mode属性配置
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>MapStruct</title>
       <link>https://geek-s.gitee.io/java-foundation/mapstruct/</link>

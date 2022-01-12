@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" data-figures="" class="page">
   <head>
-<title>Hi, Hugo | Geek-S</title>
+<title>Flatten Maven Plugin | Geek-S</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,20 +10,26 @@
 <meta property="og:locale" content="en" />
 
 <meta property="og:type" content="article">
-<meta name="description" content="Quick start 安装Hugo https://gohugo.io/getting-started/quick-start 本站主题 https://github.com/chipzoller/hugo-clarity 参考  gohugo.io/getting-started/quick-start …">
+<meta name="description" content="PS：Version：1.2.2
+场景 在进行多模块开发时，会在父级pom中定义统一版本号，如果直接进行打包，会直接将变量带入pom/jar中，导致无法正常使用，使用flatten-maven-plugin，会在打包前执行flatten:flatten，会将变量替换成实际值
+示例
+&lt;build&gt; …">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="">
-<meta name="twitter:title" content="Hi, Hugo" />
-<meta property="og:url" content="https://geek-s.gitee.io/gs/hihugo/" />
-<meta property="og:title" content="Hi, Hugo" />
-<meta property="og:description" content="Quick start 安装Hugo https://gohugo.io/getting-started/quick-start 本站主题 https://github.com/chipzoller/hugo-clarity 参考  gohugo.io/getting-started/quick-start …" />
+<meta name="twitter:title" content="Flatten Maven Plugin" />
+<meta property="og:url" content="https://geek-s.gitee.io/java-foundation/mavenpluginflatten/" />
+<meta property="og:title" content="Flatten Maven Plugin" />
+<meta property="og:description" content="PS：Version：1.2.2
+场景 在进行多模块开发时，会在父级pom中定义统一版本号，如果直接进行打包，会直接将变量带入pom/jar中，导致无法正常使用，使用flatten-maven-plugin，会在打包前执行flatten:flatten，会将变量替换成实际值
+示例
+&lt;build&gt; …" />
 <meta property="og:image" content="https://geek-s.gitee.io/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://geek-s.gitee.io/icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://geek-s.gitee.io/icons/favicon-32x32.png">
 <link rel="manifest" href="https://geek-s.gitee.io/icons/site.webmanifest">
 
-<link rel="canonical" href="https://geek-s.gitee.io/gs/hihugo/">
+<link rel="canonical" href="https://geek-s.gitee.io/java-foundation/mavenpluginflatten/">
 
     
 
@@ -76,14 +82,15 @@
   
 <div class="grid-inverse wrap content">
   <article class="post_content">
-    <h1 class="post_title">Hi, Hugo</h1>
+    <h1 class="post_title">Flatten Maven Plugin</h1>
   <div class="post_meta">
     <span><svg class="icon">
   <use xlink:href="#calendar"></use>
 </svg></span>
     <span class="post_date">
-      Dec 26, 2021</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/hugo' title="hugo" class="post_tag button button_translucent">hugo
+      Jan 11, 2022</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/java' title="java" class="post_tag button button_translucent">java
+        </a><a href='https://geek-s.gitee.io/tags/maven' title="maven" class="post_tag button button_translucent">maven
         </a>
     </span>
   </div>
@@ -92,15 +99,74 @@
 
 
     
-    <div class="post_body"><h1 id="quick-start">Quick start</h1>
-<h2 id="安装hugo">安装Hugo</h2>
-<pre><code>https://gohugo.io/getting-started/quick-start
-</code></pre><h2 id="本站主题">本站主题</h2>
-<pre><code>https://github.com/chipzoller/hugo-clarity
-</code></pre><h1 id="参考">参考</h1>
+    <div class="post_body"><p>PS：Version：1.2.2</p>
+<h1 id="场景">场景</h1>
+<p>在进行多模块开发时，会在父级pom中定义统一版本号，如果直接进行打包，会直接将变量带入pom/jar中，导致无法正常使用，使用flatten-maven-plugin，会在打包前执行<a href="https://www.mojohaus.org/flatten-maven-plugin/flatten-mojo.html">flatten:flatten</a>，会将变量替换成实际值</p>
+<p>示例</p>
+<pre><code>&lt;build&gt;
+  &lt;plugins&gt;
+    &lt;plugin&gt;
+      &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+      &lt;artifactId&gt;flatten-maven-plugin&lt;/artifactId&gt;
+      &lt;version&gt;${maven-flatten-version}&lt;/version&gt;
+      &lt;configuration&gt;
+        &lt;!-- 打包使用生成的pom --&gt;
+        &lt;updatePomFile&gt;true&lt;/updatePomFile&gt;
+        &lt;!-- 仅处理revision、sha1、changelist变量 --&gt;
+        &lt;flattenMode&gt;resolveCiFriendliesOnly&lt;/flattenMode&gt;
+        &lt;!-- 为依赖添加版本号 --&gt;
+        &lt;pomElements&gt;
+          &lt;dependencies&gt;expand&lt;/dependencies&gt;
+        &lt;/pomElements&gt;
+      &lt;/configuration&gt;
+      &lt;executions&gt;
+        &lt;execution&gt;
+          &lt;id&gt;flatten&lt;/id&gt;
+          &lt;phase&gt;process-resources&lt;/phase&gt;
+          &lt;goals&gt;
+            &lt;goal&gt;flatten&lt;/goal&gt;
+          &lt;/goals&gt;
+        &lt;/execution&gt;
+        &lt;execution&gt;
+          &lt;id&gt;flatten.clean&lt;/id&gt;
+          &lt;phase&gt;clean&lt;/phase&gt;
+          &lt;goals&gt;
+            &lt;goal&gt;clean&lt;/goal&gt;
+          &lt;/goals&gt;
+        &lt;/execution&gt;
+      &lt;/executions&gt;
+    &lt;/plugin&gt;
+  &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre><h1 id="goals">Goals</h1>
+<h2 id="flattenclean">flatten:clean</h2>
+<p>删除flatten:flatten生成的文件</p>
+<h2 id="flattenflatten">flatten:flatten</h2>
+<p>生成新的pom文件，并将项目的pom指向该文件</p>
+<h3 id="可选参数">可选参数</h3>
+<h4 id="embedbuildprofiledependencies">embedBuildProfileDependencies</h4>
+<p>如果为true，则除根据os和jdk来激活的profile外的将被移除，如果是被激活的profile的dependencies将会直接放入pom中（默认false）</p>
+<h4 id="flattendependencymode">flattenDependencyMode</h4>
+<p>direct 仅处理直接依赖的版本（默认）</p>
+<p>all	处理直接和传递依赖，将传递依赖转化成直接依赖（配置flattenMode后，不再生效）</p>
+<p>可通过flatten.dependency.mode属性配置</p>
+<h4 id="flattenmode">flattenMode</h4>
+<p>ossrh 保留所有<a href="https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide">OSS Repository-Hosting</a>需要的可选节点</p>
+<p>bom 除ossrh外，保留dependencyManagement和properties节点，</p>
+<p>defaults 移除所有可选的pom节点，除repositories外</p>
+<p>resolveCiFriendliesOnly 仅处理revision、sha1、changelist变量</p>
+<p>可通过flatten.mode属性配置</p>
+<h4 id="flattenedpomfilename">flattenedPomFilename</h4>
+<p>生成pom文件名称（默认.flattened-pom.xml），可通过flattenedPomFilename变量配置</p>
+<h4 id="outputdirectory">outputDirectory</h4>
+<p>生成pom文件目录（默认${project.basedir}）</p>
+<h4 id="pomelements">pomElements</h4>
+<p>定义如何处理其他的pom节点，如果可以的话，尽量使用flattenMode，此参数仅为要求极度灵活配置使用</p>
+<h4 id="updatepomfile">updatePomFile</h4>
+<p>是否将生成的pom设置为当前项目的pom，，可通过updatePomFile属性配置</p>
+<h1 id="参考">参考</h1>
 <ul>
-<li><a href="https://gohugo.io/getting-started/quick-start">gohugo.io/getting-started/quick-start</a></li>
-<li><a href="https://themes.gohugo.io">themes.gohugo.io</a></li>
+<li><a href="https://www.mojohaus.org/flatten-maven-plugin">flatten-maven-plugin</a></li>
 </ul>
 
     </div>
@@ -117,9 +183,6 @@
     
     <h2 class="mt-4">Recent Posts</h2>
     <ul class="flex-column">
-      <li>
-        <a href="https://geek-s.gitee.io/java-foundation/mavenpluginflatten/" class="nav-link" title="Flatten Maven Plugin">Flatten Maven Plugin</a>
-      </li>
       <li>
         <a href="https://geek-s.gitee.io/java-foundation/mapstruct/" class="nav-link" title="MapStruct">MapStruct</a>
       </li>

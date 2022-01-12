@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>java on Geek-S</title>
-    <link>https://geek-s.gitee.io/tags/java/</link>
-    <description>Recent content in java on Geek-S</description>
+    <title>maven on Geek-S</title>
+    <link>https://geek-s.gitee.io/tags/maven/</link>
+    <description>Recent content in maven on Geek-S</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Jan 2022 21:08:28 +0800</lastBuildDate><atom:link href="https://geek-s.gitee.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jan 2022 21:08:28 +0800</lastBuildDate><atom:link href="https://geek-s.gitee.io/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flatten Maven Plugin</title>
       <link>https://geek-s.gitee.io/java-foundation/mavenpluginflatten/</link>
@@ -30,68 +30,6 @@ bom 除ossrh外，保留dependencyManagement和properties节点，
 defaults 移除所有可选的pom节点，除repositories外
 resolveCiFriendliesOnly 仅处理revision、sha1、changelist变量
 可通过flatten.mode属性配置
-          
-          
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>MapStruct</title>
-      <link>https://geek-s.gitee.io/java-foundation/mapstruct/</link>
-      <pubDate>Sat, 01 Jan 2022 20:55:28 +0800</pubDate>
-      
-      <guid>https://geek-s.gitee.io/java-foundation/mapstruct/</guid>
-      <description>
-        
-          
-            Quick start public class Car { private String make; private int numberOfSeats; private CarType type; } public class CarDto { private String make; private int seatCount; private String type; } 声明Mapper
-@Mapper public interface CarMapper { CarMapper INSTANCE = Mappers.getMapper( CarMapper.class ); @Mapping(source = &amp;quot;numberOfSeats&amp;quot;, target = &amp;quot;seatCount&amp;quot;) CarDto carToCarDto(Car car); } 转换
-@Test public void shouldMapCarToDto() { // given Car car = new Car( &amp;quot;Morris&amp;quot;, 5, CarType.SEDAN ); // when CarDto carDto = CarMapper.
-          
-          
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Lombok</title>
-      <link>https://geek-s.gitee.io/java-foundation/lombok/</link>
-      <pubDate>Sat, 01 Jan 2022 20:54:28 +0800</pubDate>
-      
-      <guid>https://geek-s.gitee.io/java-foundation/lombok/</guid>
-      <description>
-        
-          
-            在项目中，会有各种实体，如Entity、Request、Response等，在不使用外部组件支持的情况下，需要为每个属性生成Getter、Setter、ToString等，Controller、Service中打印日志，使用@SLF4J可以直接注入log实例，不需要在代码中显示的声明，下面会对Lombok的接入和常用注解进行详细说明
-Install（tutorials@baeldung）   Go to File &amp;gt; Settings &amp;gt; Plugins
-  Click on Browse repositories&amp;hellip;
-  Search for Lombok Plugin
-  Click on Install plugin
-  Restart IntelliJ IDEA
-  Features @Getter and @Setter（@see projectlombok.org） 📍 私有属性生成Getter、Setter，可以在类上，也可以在属性上
-With Lombok
-import lombok.AccessLevel; import lombok.Getter; import lombok.Setter; public class GetterSetterExample { /** * Age of the person. Water is wet. * * @param age New value for this person&#39;s age.
-          
-          
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Java Foundation</title>
-      <link>https://geek-s.gitee.io/java-foundation/javafoundation/</link>
-      <pubDate>Sat, 01 Jan 2022 20:53:28 +0800</pubDate>
-      
-      <guid>https://geek-s.gitee.io/java-foundation/javafoundation/</guid>
-      <description>
-        
-          
-            Java Foundation即Java基建，旨在整理Java技术栈的快速搭建，以及效率组件
-基础   初始化工程
-  代码简化
-  实体间转换
-  持久层  MybatisPlus  TODO . . .
           
           
         
