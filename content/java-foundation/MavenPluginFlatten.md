@@ -109,3 +109,4 @@ resolveCiFriendliesOnly 仅处理revision、sha1、changelist变量
 # 参考
 
 - [flatten-maven-plugin](https://www.mojohaus.org/flatten-maven-plugin)
+- [flatten-maven-plugin@github](https://github.com/mojohaus/flatten-maven-plugin)
