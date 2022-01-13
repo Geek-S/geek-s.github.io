@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://geek-s.gitee.io/categories/</loc>
-    <lastmod>2022-01-11T21:08:28+08:00</lastmod>
-  </url><url>
-    <loc>https://geek-s.gitee.io/java-foundation/mavenpluginflatten/</loc>
-    <lastmod>2022-01-11T21:08:28+08:00</lastmod>
+    <lastmod>2022-01-13T10:33:28+08:00</lastmod>
   </url><url>
     <loc>https://geek-s.gitee.io/</loc>
+    <lastmod>2022-01-13T10:33:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/linux/killcommand/</loc>
+    <lastmod>2022-01-13T10:33:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/categories/linux/</loc>
+    <lastmod>2022-01-13T10:33:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/tags/linux/</loc>
+    <lastmod>2022-01-13T10:33:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/linux/</loc>
+    <lastmod>2022-01-13T10:33:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/tags/</loc>
+    <lastmod>2022-01-13T10:33:28+08:00</lastmod>
+  </url><url>
+    <loc>https://geek-s.gitee.io/java-foundation/mavenpluginflatten/</loc>
     <lastmod>2022-01-11T21:08:28+08:00</lastmod>
   </url><url>
     <loc>https://geek-s.gitee.io/tags/java/</loc>
@@ -21,9 +36,6 @@
     <lastmod>2022-01-11T21:08:28+08:00</lastmod>
   </url><url>
     <loc>https://geek-s.gitee.io/tags/maven/</loc>
-    <lastmod>2022-01-11T21:08:28+08:00</lastmod>
-  </url><url>
-    <loc>https://geek-s.gitee.io/tags/</loc>
     <lastmod>2022-01-11T21:08:28+08:00</lastmod>
   </url><url>
     <loc>https://geek-s.gitee.io/java-foundation/mapstruct/</loc>

@@ -1,22 +1,21 @@
 
 <!DOCTYPE html>
-<html lang="en" data-figures="" class="home">
+<html lang="en" data-figures="">
   <head>
-	<meta name="generator" content="Hugo 0.84.2" />
-<title>Geek-S</title>
+<title>linux | Geek-S</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <meta property="og:locale" content="en" />
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta name="description" content="">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="">
-<meta name="twitter:title" content="Geek-S" />
-<meta property="og:url" content="https://geek-s.gitee.io/" />
-<meta property="og:title" content="Geek-S" />
+<meta name="twitter:title" content="linux" />
+<meta property="og:url" content="https://geek-s.gitee.io/tags/linux/" />
+<meta property="og:title" content="linux" />
 <meta property="og:description" content="" />
 <meta property="og:image" content="https://geek-s.gitee.io/" />
 
@@ -24,8 +23,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://geek-s.gitee.io/icons/favicon-32x32.png">
 <link rel="manifest" href="https://geek-s.gitee.io/icons/site.webmanifest">
 
-<link rel="canonical" href="https://geek-s.gitee.io/">
-<link rel="alternate" type="application/rss+xml" href="https://geek-s.gitee.io/index.xml" title="Geek-S" />
+<link rel="canonical" href="https://geek-s.gitee.io/tags/linux/">
+<link rel="alternate" type="application/rss+xml" href="https://geek-s.gitee.io/tags/linux/index.xml" title="Geek-S" />
 
     
 
@@ -76,15 +75,13 @@
 
     <main>
 
-  
-
 <div class="grid-inverse wrap content">
   <ul class="posts" id="posts">
       <li class="post_item">
   <div class="excerpt">
     <div class="excerpt_header">
       <h3 class="post_link">
-        <a href="https://geek-s.gitee.io/java-foundation/mavenpluginflatten/" title="Flatten Maven Plugin">Flatten Maven Plugin</a>
+        <a href="https://geek-s.gitee.io/linux/killcommand/" title="Kill Command">Kill Command</a>
       </h3>
       
   <div class="post_meta">
@@ -92,9 +89,8 @@
   <use xlink:href="#calendar"></use>
 </svg></span>
     <span class="post_date">
-      Jan 11, 2022</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/java' title="java" class="post_tag button button_translucent">java
-        </a><a href='https://geek-s.gitee.io/tags/maven' title="maven" class="post_tag button button_translucent">maven
+      Jan 13, 2022</span>
+    <span class="post_time"> · 3 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/linux' title="linux" class="post_tag button button_translucent">linux
         </a>
     </span>
   </div>
@@ -104,118 +100,14 @@
         <div>
           <p class="pale">
             
-              PS：Version：1.2.2
-场景 在进行多模块开发时，会在父级pom中定义统一版本号，如果直接进行打包，会直接将变量带入pom/jar中，导致无法正常使用，使用flatten-maven-plugin，会在打包前执行flatten:flatten，会将变量替换成实际值
-示例
-&lt;build&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt; &lt;artifactId&gt;flatten-maven-plugin&lt;/artifactId&gt; …
+              在日常开发中，经常会使用到kill命令关闭进程，不同的signal对进程的作用是不同的，比较常用的指令是kill -9 pid，但是如果用在生产环境中，可能会带来意想不到的问题，如在Java应用中，直接关闭应用，可能会导致业务逻辑执行不完整、存量请求失败等，以下仅对常用signal类型进行说明，命令详细信息查看《说明》部分。
+  信号处理类型有三个：默认、忽略、捕获
+  常用
+  kill -9 pid 不可忽虑、捕获，只可以默认处理 kill -15 pid 15为默认的signal类型，等同于kill pid，  按键触发  ctrl + c &mdash;&gt; 2(SIGINT)
+ctrl + \ &mdash;&gt; …
             
           </p>
-          <a href="https://geek-s.gitee.io/java-foundation/mavenpluginflatten/" title="Read More" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://geek-s.gitee.io/java-foundation/mapstruct/" title="MapStruct">MapStruct</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg></span>
-    <span class="post_date">
-      Jan 1, 2022</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/java' title="java" class="post_tag button button_translucent">java
-        </a>
-    </span>
-  </div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">
-            
-              Quick start public class Car { private String make; private int numberOfSeats; private CarType type; } public class CarDto { private String make; private int seatCount; private String type; } 声明Mapper
-@Mapper public interface CarMapper { CarMapper INSTANCE = Mappers.getMapper( CarMapper.class ); @Mapping(source = …
-            
-          </p>
-          <a href="https://geek-s.gitee.io/java-foundation/mapstruct/" title="Read More" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://geek-s.gitee.io/java-foundation/lombok/" title="Lombok">Lombok</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg></span>
-    <span class="post_date">
-      Jan 1, 2022</span>
-    <span class="post_time"> · 5 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/java' title="java" class="post_tag button button_translucent">java
-        </a>
-    </span>
-  </div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">
-            
-              在项目中，会有各种实体，如Entity、Request、Response等，在不使用外部组件支持的情况下，需要为每个属性生成Getter、Setter、ToString等，Controller、Service中打印日志，使用@SLF4J可以直接注入log实例，不需要在代码中显示的声明，下面会对Lombok的接入和常用注解进行详细说明
-Install（tutorials@baeldung）   Go to File &gt; Settings &gt; Plugins
-  Click on Browse repositories&hellip;
-  Search for Lombok Plugin
-  Click on Install …
-            
-          </p>
-          <a href="https://geek-s.gitee.io/java-foundation/lombok/" title="Read More" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://geek-s.gitee.io/java-foundation/javafoundation/" title="Java Foundation">Java Foundation</a>
-      </h3>
-      
-  <div class="post_meta">
-    <span><svg class="icon">
-  <use xlink:href="#calendar"></use>
-</svg></span>
-    <span class="post_date">
-      Jan 1, 2022</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/java' title="java" class="post_tag button button_translucent">java
-        </a>
-    </span>
-  </div>
-
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">
-            
-              Java Foundation即Java基建，旨在整理Java技术栈的快速搭建，以及效率组件
-基础   初始化工程
-  代码简化
-  实体间转换
-  持久层  MybatisPlus  TODO . . .
-            
-          </p>
-          <a href="https://geek-s.gitee.io/java-foundation/javafoundation/" title="Read More" class="excerpt_more button">Read More</a>
+          <a href="https://geek-s.gitee.io/linux/killcommand/" title="Read More" class="excerpt_more button">Read More</a>
         </div>
       </div>
     </div>
