@@ -1,8 +1,8 @@
 
 <!DOCTYPE html>
-<html lang="en" data-figures="">
+<html lang="en" data-figures="" class="page">
   <head>
-<title>curl | Geek-S</title>
+<title>无损发布 | Geek-S</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,21 +10,22 @@
 <meta property="og:locale" content="en" />
 
 <meta property="og:type" content="article">
-<meta name="description" content="">
+<meta name="description" content="什么是无损？ 在应用进行部署时，流程都是停止应用，然后更新代码包，然后启动，如果不进行处理，会导致用户请求失败，影响用户体验，当然不同的部署环境，需要处理的问题时不一样的，接下来针对指定场景的无损进行说明。
+无损发布      业务网关 业务网关对接流量网关，假定为Nginx，想要做到无损，在Nginx将业务网关实例 …">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="">
-<meta name="twitter:title" content="curl" />
-<meta property="og:url" content="https://geek-s.gitee.io/tags/curl/" />
-<meta property="og:title" content="curl" />
-<meta property="og:description" content="" />
+<meta name="twitter:title" content="无损发布" />
+<meta property="og:url" content="https://geek-s.gitee.io/dev-ops/graceful-deployment/" />
+<meta property="og:title" content="无损发布" />
+<meta property="og:description" content="什么是无损？ 在应用进行部署时，流程都是停止应用，然后更新代码包，然后启动，如果不进行处理，会导致用户请求失败，影响用户体验，当然不同的部署环境，需要处理的问题时不一样的，接下来针对指定场景的无损进行说明。
+无损发布      业务网关 业务网关对接流量网关，假定为Nginx，想要做到无损，在Nginx将业务网关实例 …" />
 <meta property="og:image" content="https://geek-s.gitee.io/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://geek-s.gitee.io/icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://geek-s.gitee.io/icons/favicon-32x32.png">
 <link rel="manifest" href="https://geek-s.gitee.io/icons/site.webmanifest">
 
-<link rel="canonical" href="https://geek-s.gitee.io/tags/curl/">
-<link rel="alternate" type="application/rss+xml" href="https://geek-s.gitee.io/tags/curl/index.xml" title="Geek-S" />
+<link rel="canonical" href="https://geek-s.gitee.io/dev-ops/graceful-deployment/">
 
     
 
@@ -74,44 +75,109 @@
 </header>
 
     <main>
-
+  
 <div class="grid-inverse wrap content">
-  <ul class="posts" id="posts">
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://geek-s.gitee.io/dev-ops/curl/" title="Curl">Curl</a>
-      </h3>
-      
+  <article class="post_content">
+    <h1 class="post_title">无损发布</h1>
   <div class="post_meta">
     <span><svg class="icon">
   <use xlink:href="#calendar"></use>
 </svg></span>
     <span class="post_date">
       Dec 30, 2021</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/curl' title="curl" class="post_tag button button_translucent">curl
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/%E6%97%A0%E6%8D%9F%E5%8F%91%E5%B8%83' title="无损发布" class="post_tag button button_translucent">无损发布
         </a>
     </span>
   </div>
 
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">
-            
-              Quick start Get curl https://www.example.com/ Post curl -d &quot;name=Rafael%20Sagula&amp;phone=3320780&quot; http://www.where.com/guest.cgi Curl 获取 Charles      Chrome      参考  curl.se curl@github  
-            
-          </p>
-          <a href="https://geek-s.gitee.io/dev-ops/curl/" title="Read More" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
 
-    <li>
-    </li>
-  </ul>
+
+
+    
+    <div class="post_body"><h1 id="什么是无损">什么是无损？</h1>
+<p>在应用进行部署时，流程都是停止应用，然后更新代码包，然后启动，如果不进行处理，会导致用户请求失败，影响用户体验，当然不同的部署环境，需要处理的问题时不一样的，接下来针对指定场景的无损进行说明。</p>
+<h1 id="无损发布">无损发布</h1>
+<p>
+
+
+
+
+
+
+
+
+
+  <figure>
+    <picture>
+
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+
+      <img class="image_figure image_internal" src="https://geek-s.gitee.io/img/server-architecture.png" alt="部署架构" loading="lazy" decoding="async" width="968" height="928"  />
+      
+
+    </picture>
+  </figure>
+</p>
+<h2 id="业务网关">业务网关</h2>
+<p>业务网关对接流量网关，假定为Nginx，想要做到无损，在Nginx将业务网关实例从upstream中剔除前，业务网关应该是正常服务的，所以在业务网关重启前，应该将Nginx对业务网关的探活接口改为异常状态，然后Nginx将实例从upstream中剔除，等待一定时间后（nginx剔除实例，并且存量请求正常处理完成），进行部署操作。</p>
+<h2 id="应用">应用</h2>
+<p>业务网关转发请求到应用跟应用间调用的链路是一致的，都是通过应用从注册中心获取的服务列表进行调用的，所以，想要做到无损，在应用中的服务列表将下线机器剔除前，应用应该是正常服务的，所以在应用启动前，需要先取消注册，等待一定时间后（消费者缓存中的服务列表无此实例，并且存量请求正常处理完成），进行部署操作。</p>
+<h2 id="其他">其他</h2>
+<p>上面两个场景主要关注web方面，但是在实际场景中，可能会更加复杂，比如消息的消费者，如果不能想web api一样，提前停止pull msg，可能会导致应用停止时还在运行中，导致逻辑丢失，这部分由于没有实际处理过，目前只能简单描述（可以参考一下spring boot 2.3.0-Release的graceful shutdown是否有对消息的消费者进行处理，或者是随着spring对bean的回收，就可以正常停止消费？？？？）。</p>
+<h1 id="参考">参考</h1>
+<ul>
+<li><a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.3-Release-Notes#graceful-shutdown">Spring-Boot-2.3-Release-Notes#graceful-shutdown</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/268858056">Spring boot 2.3优雅下线，距离生产还有多远？</a></li>
+</ul>
+
+    </div>
+<div class="post_comments">
+  
+  
+</div>
+
+
+
+  </article>
 <aside class="sidebar">
   <section class="sidebar_inner">
     
@@ -203,9 +269,8 @@
   </section>
 </aside>
 
+  
 </div>
-
-
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
     <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>

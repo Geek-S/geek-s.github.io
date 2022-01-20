@@ -6,13 +6,34 @@
     <description>Recent content on Geek-S</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Jan 2022 10:33:28 +0800</lastBuildDate><atom:link href="https://geek-s.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jan 2022 10:58:28 +0800</lastBuildDate><atom:link href="https://geek-s.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Code Format</title>
+      <link>https://geek-s.gitee.io/java-foundation/code-format/</link>
+      <pubDate>Thu, 20 Jan 2022 10:58:28 +0800</pubDate>
+      
+      <guid>https://geek-s.gitee.io/java-foundation/code-format/</guid>
+      <description>
+        
+          
+            在开发过程中，大家的开发工具、格式化的习惯等都有所不同，在进行协作时，如果将一个未进行格式化的代码文件进行格式化，将会有很大的变动，在Git的变动中，会不可读，而且很容易造成代码冲突，另外处于规范的角度，统一的代码格式化是很有必要的，之前都是基于默认的格式化（eclipse、idea），在切换工具时，会发现，差别很大，所以需要工具、环境无关的方案，本文就Spring format在《Idea + Gradle》使用的代码格式化来进行说明。
+Gradle 添加格式化插件 buildscript { repositories { mavenCentral() } dependencies { classpath(&amp;quot;io.spring.javaformat:spring-javaformat-gradle-plugin:0.0.29&amp;quot;) } } apply plugin: &#39;io.spring.javaformat&#39; 插件会添加format和checkFormat任务到项目，当运行Gradle的check任务时，checkFormat任务会自动执行，如果想排除某些包，不进行检查，可以添加如下配置：
+tasks.withType(io.spring.javaformat.gradle.CheckTask) { exclude &amp;quot;package/to/exclude&amp;quot; } 添加Checkstyle pply plugin: &#39;checkstyle&#39; checkstyle { toolVersion = &amp;quot;8.45.1&amp;quot; } dependencies { checkstyle(&amp;quot;io.spring.javaformat:spring-javaformat-checkstyle:0.0.29&amp;quot;) } 添加checktyle配置文件（默认目录config/checkstyle/checkstyle.xml）
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt; &amp;lt;!DOCTYPE module PUBLIC &amp;quot;-//Checkstyle//DTD Checkstyle Configuration 1.3//EN&amp;quot; &amp;quot;https://checkstyle.org/dtds/configuration_1_3.dtd&amp;quot;&amp;gt; &amp;lt;module name=&amp;quot;com.puppycrawl.tools.checkstyle.Checker&amp;quot;&amp;gt; &amp;lt;module name=&amp;quot;io.spring.javaformat.checkstyle.SpringChecks&amp;quot; /&amp;gt; &amp;lt;/module&amp;gt; Java 8 默认formatter需要Java 11，在项目根目录添加.springjavaformatconfig文件：
+java-baseline=8 空格缩进 默认的缩进格式为tabs（强烈建议），如果需要使用空格进行缩进，在项目根目录添加.springjavaformatconfig文件：
+indentation-style=spaces Tips 排除指定的检查 &amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt; &amp;lt;!DOCTYPE module PUBLIC &amp;quot;-//Checkstyle//DTD Checkstyle Configuration 1.
+          
+          
+        
+      </description>
+    </item>
+    
     <item>
       <title>Flatten Maven Plugin</title>
-      <link>https://geek-s.gitee.io/java-foundation/mavenpluginflatten/</link>
+      <link>https://geek-s.gitee.io/java-foundation/maven-plugin-flatten/</link>
       <pubDate>Tue, 11 Jan 2022 21:08:28 +0800</pubDate>
       
-      <guid>https://geek-s.gitee.io/java-foundation/mavenpluginflatten/</guid>
+      <guid>https://geek-s.gitee.io/java-foundation/maven-plugin-flatten/</guid>
       <description>
         
           
@@ -80,10 +101,10 @@ import lombok.AccessLevel; import lombok.Getter; import lombok.Setter; public cl
     
     <item>
       <title>Java Foundation</title>
-      <link>https://geek-s.gitee.io/java-foundation/javafoundation/</link>
+      <link>https://geek-s.gitee.io/java-foundation/java-foundation/</link>
       <pubDate>Sat, 01 Jan 2022 20:53:28 +0800</pubDate>
       
-      <guid>https://geek-s.gitee.io/java-foundation/javafoundation/</guid>
+      <guid>https://geek-s.gitee.io/java-foundation/java-foundation/</guid>
       <description>
         
           
