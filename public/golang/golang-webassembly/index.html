@@ -1,8 +1,8 @@
 
 <!DOCTYPE html>
-<html lang="en" data-figures="">
+<html lang="en" data-figures="" class="page">
   <head>
-<title>hugo | Geek-S</title>
+<title>Golang webassembly | Geek-S</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,21 +10,24 @@
 <meta property="og:locale" content="en" />
 
 <meta property="og:type" content="article">
-<meta name="description" content="">
+<meta name="description" content="Quick start Go的版本需要 1.11 及以上版本
+package main import &quot;fmt&quot; func main() { fmt.Println(&quot;Hello, WebAssembly!&quot;) } 设置GOOS=js 、 GOARCH=wasm环境变量后编译
+$ …">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="">
-<meta name="twitter:title" content="hugo" />
-<meta property="og:url" content="https://geek-s.gitee.io/tags/hugo/" />
-<meta property="og:title" content="hugo" />
-<meta property="og:description" content="" />
+<meta name="twitter:title" content="Golang webassembly" />
+<meta property="og:url" content="https://geek-s.gitee.io/golang/golang-webassembly/" />
+<meta property="og:title" content="Golang webassembly" />
+<meta property="og:description" content="Quick start Go的版本需要 1.11 及以上版本
+package main import &quot;fmt&quot; func main() { fmt.Println(&quot;Hello, WebAssembly!&quot;) } 设置GOOS=js 、 GOARCH=wasm环境变量后编译
+$ …" />
 <meta property="og:image" content="https://geek-s.gitee.io/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="https://geek-s.gitee.io/icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://geek-s.gitee.io/icons/favicon-32x32.png">
 <link rel="manifest" href="https://geek-s.gitee.io/icons/site.webmanifest">
 
-<link rel="canonical" href="https://geek-s.gitee.io/tags/hugo/">
-<link rel="alternate" type="application/rss+xml" href="https://geek-s.gitee.io/tags/hugo/index.xml" title="Geek-S" />
+<link rel="canonical" href="https://geek-s.gitee.io/golang/golang-webassembly/">
 
     
 
@@ -74,44 +77,131 @@
 </header>
 
     <main>
-
+  
 <div class="grid-inverse wrap content">
-  <ul class="posts" id="posts">
-      <li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="https://geek-s.gitee.io/gs/hi-hugo/" title="Hi, Hugo">Hi, Hugo</a>
-      </h3>
-      
+  <article class="post_content">
+    <h1 class="post_title">Golang webassembly</h1>
   <div class="post_meta">
     <span><svg class="icon">
   <use xlink:href="#calendar"></use>
 </svg></span>
     <span class="post_date">
-      Dec 26, 2021</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/hugo' title="hugo" class="post_tag button button_translucent">hugo
+      Jan 21, 2022</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/golang' title="golang" class="post_tag button button_translucent">golang
+        </a><a href='https://geek-s.gitee.io/tags/wasm' title="wasm" class="post_tag button button_translucent">wasm
         </a>
     </span>
   </div>
 
-    </div>
-      <div class="excerpt_footer">
-        <div>
-          <p class="pale">
-            
-              Quick start 安装Hugo https://gohugo.io/getting-started/quick-start 本站主题 https://github.com/chipzoller/hugo-clarity 参考  gohugo.io/getting-started/quick-start themes.gohugo.io  
-            
-          </p>
-          <a href="https://geek-s.gitee.io/gs/hi-hugo/" title="Read More" class="excerpt_more button">Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
 
-    <li>
-    </li>
-  </ul>
+
+
+    
+    <div class="post_body"><h1 id="quick-start">Quick start</h1>
+<p>Go的版本需要 <code>1.11</code> 及以上版本</p>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+	fmt.Println(&quot;Hello, WebAssembly!&quot;)
+}
+</code></pre><p>设置<code>GOOS=js</code> 、 <code>GOARCH=wasm</code>环境变量后编译</p>
+<pre><code>$ GOOS=js GOARCH=wasm go build -o main.wasm
+</code></pre><p>在浏览器执行main.wasm，需要JS文件：</p>
+<pre><code>$ cp &quot;$(go env GOROOT)/misc/wasm/wasm_exec.js&quot; .
+</code></pre><p>创建index.html文件：</p>
+<pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;script src=&quot;wasm_exec.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+      const go = new Go();
+        WebAssembly.instantiateStreaming(fetch(&quot;main.wasm&quot;), go.importObject).then((result) =&gt; {
+            go.run(result.instance);
+        });
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>如果浏览器不支持WebAssembly.instantiateStreaming，可以使用<a href="https://github.com/golang/go/blob/b2fcfc1a50fbd46556f7075f7f1fbf600b5c9e5d/misc/wasm/wasm_exec.html#L17-L22">polyfill</a></p>
+<p>将<code>index.html</code>、<code>wasm_exec.js</code>、<code>main.wasm</code>放在web服务器（<a href="https://github.com/shurcooL/goexec#goexec">goexec</a>）</p>
+<pre><code># install goexec: go get -u github.com/shurcooL/goexec
+$ goexec 'http.ListenAndServe(`:8080`, http.FileServer(http.Dir(`.`)))'
+</code></pre><p>
+
+
+
+
+
+
+
+
+
+  <figure>
+    <picture>
+
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+
+      <img class="image_figure image_internal" src="https://geek-s.gitee.io/img/golang-wasm.jpg" alt="" loading="lazy" decoding="async" width="409" height="302"  />
+      
+
+    </picture>
+  </figure>
+</p>
+<h1 id="参考">参考</h1>
+<ul>
+<li><a href="https://github.com/golang/go/wiki/WebAssembly">WebAssembly@github</a></li>
+</ul>
+
+    </div>
+<div class="post_comments">
+  
+  
+</div>
+
+
+
+  </article>
 <aside class="sidebar">
   <section class="sidebar_inner">
     
@@ -218,9 +308,8 @@
   </section>
 </aside>
 
+  
 </div>
-
-
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
     <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>

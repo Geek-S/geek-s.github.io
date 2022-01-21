@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" data-figures="">
   <head>
-<title>hugo | Geek-S</title>
+<title>golang | Geek-S</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,9 +13,9 @@
 <meta name="description" content="">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="">
-<meta name="twitter:title" content="hugo" />
-<meta property="og:url" content="https://geek-s.gitee.io/tags/hugo/" />
-<meta property="og:title" content="hugo" />
+<meta name="twitter:title" content="golang" />
+<meta property="og:url" content="https://geek-s.gitee.io/tags/golang/" />
+<meta property="og:title" content="golang" />
 <meta property="og:description" content="" />
 <meta property="og:image" content="https://geek-s.gitee.io/" />
 
@@ -23,8 +23,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://geek-s.gitee.io/icons/favicon-32x32.png">
 <link rel="manifest" href="https://geek-s.gitee.io/icons/site.webmanifest">
 
-<link rel="canonical" href="https://geek-s.gitee.io/tags/hugo/">
-<link rel="alternate" type="application/rss+xml" href="https://geek-s.gitee.io/tags/hugo/index.xml" title="Geek-S" />
+<link rel="canonical" href="https://geek-s.gitee.io/tags/golang/">
+<link rel="alternate" type="application/rss+xml" href="https://geek-s.gitee.io/tags/golang/index.xml" title="Geek-S" />
 
     
 
@@ -81,7 +81,7 @@
   <div class="excerpt">
     <div class="excerpt_header">
       <h3 class="post_link">
-        <a href="https://geek-s.gitee.io/gs/hi-hugo/" title="Hi, Hugo">Hi, Hugo</a>
+        <a href="https://geek-s.gitee.io/golang/golang-webassembly/" title="Golang webassembly">Golang webassembly</a>
       </h3>
       
   <div class="post_meta">
@@ -89,8 +89,9 @@
   <use xlink:href="#calendar"></use>
 </svg></span>
     <span class="post_date">
-      Dec 26, 2021</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/hugo' title="hugo" class="post_tag button button_translucent">hugo
+      Jan 21, 2022</span>
+    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://geek-s.gitee.io/tags/golang' title="golang" class="post_tag button button_translucent">golang
+        </a><a href='https://geek-s.gitee.io/tags/wasm' title="wasm" class="post_tag button button_translucent">wasm
         </a>
     </span>
   </div>
@@ -100,10 +101,14 @@
         <div>
           <p class="pale">
             
-              Quick start 安装Hugo https://gohugo.io/getting-started/quick-start 本站主题 https://github.com/chipzoller/hugo-clarity 参考  gohugo.io/getting-started/quick-start themes.gohugo.io  
+              Quick start Go的版本需要 1.11 及以上版本
+package main import &quot;fmt&quot; func main() { fmt.Println(&quot;Hello, WebAssembly!&quot;) } 设置GOOS=js 、 GOARCH=wasm环境变量后编译
+$ GOOS=js GOARCH=wasm go build -o main.wasm 在浏览器执行main.wasm，需要JS文件：
+$ cp &quot;$(go env GOROOT)/misc/wasm/wasm_exec.js&quot; . 创建index.html文件：
+&lt;html&gt; …
             
           </p>
-          <a href="https://geek-s.gitee.io/gs/hi-hugo/" title="Read More" class="excerpt_more button">Read More</a>
+          <a href="https://geek-s.gitee.io/golang/golang-webassembly/" title="Read More" class="excerpt_more button">Read More</a>
         </div>
       </div>
     </div>
