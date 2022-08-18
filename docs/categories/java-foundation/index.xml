@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java Foundation on Geek-S</title>
+    <link>https://geek-s.gitee.io/categories/java-foundation/</link>
+    <description>Recent content in Java Foundation on Geek-S</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Jan 2022 10:58:28 +0800</lastBuildDate><atom:link href="https://geek-s.gitee.io/categories/java-foundation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Code Format</title>
+      <link>https://geek-s.gitee.io/java-foundation/code-format/</link>
+      <pubDate>Thu, 20 Jan 2022 10:58:28 +0800</pubDate>
+      
+      <guid>https://geek-s.gitee.io/java-foundation/code-format/</guid>
+      <description>
+        
+          
+            在开发过程中，大家的开发工具、格式化的习惯等都有所不同，在进行协作时，如果将一个未进行格式化的代码文件进行格式化，将会有很大的变动，在Git的变动中，会不可读，而且很容易造成代码冲突，另外处于规范的角度，统一的代码格式化是很有必要的，之前都是基于默认的格式化（eclipse、idea），在切换工具时，会发现，差别很大，所以需要工具、环境无关的方案，本文就Spring format在《Idea + Gradle》使用的代码格式化来进行说明。
+Gradle 添加格式化插件 buildscript { repositories { mavenCentral() } dependencies { classpath(&amp;quot;io.spring.javaformat:spring-javaformat-gradle-plugin:0.0.29&amp;quot;) } } apply plugin: &#39;io.spring.javaformat&#39; 插件会添加format和checkFormat任务到项目，当运行Gradle的check任务时，checkFormat任务会自动执行，如果想排除某些包，不进行检查，可以添加如下配置：
+tasks.withType(io.spring.javaformat.gradle.CheckTask) { exclude &amp;quot;package/to/exclude&amp;quot; } 添加Checkstyle pply plugin: &#39;checkstyle&#39; checkstyle { toolVersion = &amp;quot;8.45.1&amp;quot; } dependencies { checkstyle(&amp;quot;io.spring.javaformat:spring-javaformat-checkstyle:0.0.29&amp;quot;) } 添加checktyle配置文件（默认目录config/checkstyle/checkstyle.xml）
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt; &amp;lt;!DOCTYPE module PUBLIC &amp;quot;-//Checkstyle//DTD Checkstyle Configuration 1.3//EN&amp;quot; &amp;quot;https://checkstyle.org/dtds/configuration_1_3.dtd&amp;quot;&amp;gt; &amp;lt;module name=&amp;quot;com.puppycrawl.tools.checkstyle.Checker&amp;quot;&amp;gt; &amp;lt;module name=&amp;quot;io.spring.javaformat.checkstyle.SpringChecks&amp;quot; /&amp;gt; &amp;lt;/module&amp;gt; Java 8 默认formatter需要Java 11，在项目根目录添加.springjavaformatconfig文件：
+java-baseline=8 空格缩进 默认的缩进格式为tabs（强烈建议），如果需要使用空格进行缩进，在项目根目录添加.springjavaformatconfig文件：
+indentation-style=spaces Tips 排除指定的检查 &amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt; &amp;lt;!DOCTYPE module PUBLIC &amp;quot;-//Checkstyle//DTD Checkstyle Configuration 1.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Flatten Maven Plugin</title>
+      <link>https://geek-s.gitee.io/java-foundation/maven-plugin-flatten/</link>
+      <pubDate>Tue, 11 Jan 2022 21:08:28 +0800</pubDate>
+      
+      <guid>https://geek-s.gitee.io/java-foundation/maven-plugin-flatten/</guid>
+      <description>
+        
+          
+            PS：Version：1.2.2
+场景 在进行多模块开发时，会在父级pom中定义统一版本号，如果直接进行打包，会直接将变量带入pom/jar中，导致无法正常使用，使用flatten-maven-plugin，会在打包前执行flatten:flatten，会将变量替换成实际值
+示例
+&amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.codehaus.mojo&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;flatten-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;${maven-flatten-version}&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;!-- 打包使用生成的pom --&amp;gt; &amp;lt;updatePomFile&amp;gt;true&amp;lt;/updatePomFile&amp;gt; &amp;lt;!-- 仅处理revision、sha1、changelist变量 --&amp;gt; &amp;lt;flattenMode&amp;gt;resolveCiFriendliesOnly&amp;lt;/flattenMode&amp;gt; &amp;lt;!-- 为依赖添加版本号 --&amp;gt; &amp;lt;pomElements&amp;gt; &amp;lt;dependencies&amp;gt;expand&amp;lt;/dependencies&amp;gt; &amp;lt;/pomElements&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;executions&amp;gt; &amp;lt;execution&amp;gt; &amp;lt;id&amp;gt;flatten&amp;lt;/id&amp;gt; &amp;lt;phase&amp;gt;process-resources&amp;lt;/phase&amp;gt; &amp;lt;goals&amp;gt; &amp;lt;goal&amp;gt;flatten&amp;lt;/goal&amp;gt; &amp;lt;/goals&amp;gt; &amp;lt;/execution&amp;gt; &amp;lt;execution&amp;gt; &amp;lt;id&amp;gt;flatten.clean&amp;lt;/id&amp;gt; &amp;lt;phase&amp;gt;clean&amp;lt;/phase&amp;gt; &amp;lt;goals&amp;gt; &amp;lt;goal&amp;gt;clean&amp;lt;/goal&amp;gt; &amp;lt;/goals&amp;gt; &amp;lt;/execution&amp;gt; &amp;lt;/executions&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt; Goals flatten:clean 删除flatten:flatten生成的文件
+flatten:flatten 生成新的pom文件，并将项目的pom指向该文件
+可选参数 embedBuildProfileDependencies 如果为true，则除根据os和jdk来激活的profile外的将被移除，如果是被激活的profile的dependencies将会直接放入pom中（默认false）
+flattenDependencyMode direct 仅处理直接依赖的版本（默认）
+all	处理直接和传递依赖，将传递依赖转化成直接依赖（配置flattenMode后，不再生效）
+可通过flatten.dependency.mode属性配置
+flattenMode ossrh 保留所有OSS Repository-Hosting需要的可选节点
+bom 除ossrh外，保留dependencyManagement和properties节点，
+defaults 移除所有可选的pom节点，除repositories外
+resolveCiFriendliesOnly 仅处理revision、sha1、changelist变量
+可通过flatten.mode属性配置
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>MapStruct</title>
+      <link>https://geek-s.gitee.io/java-foundation/mapstruct/</link>
+      <pubDate>Sat, 01 Jan 2022 20:55:28 +0800</pubDate>
+      
+      <guid>https://geek-s.gitee.io/java-foundation/mapstruct/</guid>
+      <description>
+        
+          
+            Quick start public class Car { private String make; private int numberOfSeats; private CarType type; } public class CarDto { private String make; private int seatCount; private String type; } 声明Mapper
+@Mapper public interface CarMapper { CarMapper INSTANCE = Mappers.getMapper( CarMapper.class ); @Mapping(source = &amp;quot;numberOfSeats&amp;quot;, target = &amp;quot;seatCount&amp;quot;) CarDto carToCarDto(Car car); } 转换
+@Test public void shouldMapCarToDto() { // given Car car = new Car( &amp;quot;Morris&amp;quot;, 5, CarType.SEDAN ); // when CarDto carDto = CarMapper.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Lombok</title>
+      <link>https://geek-s.gitee.io/java-foundation/lombok/</link>
+      <pubDate>Sat, 01 Jan 2022 20:54:28 +0800</pubDate>
+      
+      <guid>https://geek-s.gitee.io/java-foundation/lombok/</guid>
+      <description>
+        
+          
+            在项目中，会有各种实体，如Entity、Request、Response等，在不使用外部组件支持的情况下，需要为每个属性生成Getter、Setter、ToString等，Controller、Service中打印日志，使用@SLF4J可以直接注入log实例，不需要在代码中显示的声明，下面会对Lombok的接入和常用注解进行详细说明
+Install（tutorials@baeldung）   Go to File &amp;gt; Settings &amp;gt; Plugins
+  Click on Browse repositories&amp;hellip;
+  Search for Lombok Plugin
+  Click on Install plugin
+  Restart IntelliJ IDEA
+  Features @Getter and @Setter（@see projectlombok.org） 📍 私有属性生成Getter、Setter，可以在类上，也可以在属性上
+With Lombok
+import lombok.AccessLevel; import lombok.Getter; import lombok.Setter; public class GetterSetterExample { /** * Age of the person. Water is wet. * * @param age New value for this person&#39;s age.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Java Foundation</title>
+      <link>https://geek-s.gitee.io/java-foundation/java-foundation/</link>
+      <pubDate>Sat, 01 Jan 2022 20:53:28 +0800</pubDate>
+      
+      <guid>https://geek-s.gitee.io/java-foundation/java-foundation/</guid>
+      <description>
+        
+          
+            Java Foundation即Java基建，旨在整理Java技术栈的快速搭建，以及效率组件
+基础   初始化工程
+  代码简化
+  实体间转换
+  持久层  MybatisPlus  TODO . . .
+          
+          
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
