@@ -1,5 +1,4 @@
-
-baseURL = "https://geek-s.github.io/"
+baseURL = "https://geek-s.gitee.io/"
 languageCode = "en-us"
 title = "Geek-S"
 theme = "hugo-clarity"
