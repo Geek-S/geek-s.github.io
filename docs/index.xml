@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Geek-S</title>
-    <link>https://geek-s.gitee.io/</link>
+    <link>https://geek-s.github.io/</link>
     <description>Recent content on Geek-S</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Jan 2022 12:40:28 +0800</lastBuildDate><atom:link href="https://geek-s.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jan 2022 12:40:28 +0800</lastBuildDate><atom:link href="https://geek-s.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Code Format</title>
-      <link>https://geek-s.gitee.io/java-foundation/code-format/</link>
+      <link>https://geek-s.github.io/java-foundation/code-format/</link>
       <pubDate>Thu, 20 Jan 2022 10:58:28 +0800</pubDate>
       
-      <guid>https://geek-s.gitee.io/java-foundation/code-format/</guid>
+      <guid>https://geek-s.github.io/java-foundation/code-format/</guid>
       <description>
         
           
@@ -30,10 +30,10 @@ indentation-style=spaces Tips 排除指定的检查 &amp;lt;?xml version=&amp;qu
     
     <item>
       <title>Flatten Maven Plugin</title>
-      <link>https://geek-s.gitee.io/java-foundation/maven-plugin-flatten/</link>
+      <link>https://geek-s.github.io/java-foundation/maven-plugin-flatten/</link>
       <pubDate>Tue, 11 Jan 2022 21:08:28 +0800</pubDate>
       
-      <guid>https://geek-s.gitee.io/java-foundation/maven-plugin-flatten/</guid>
+      <guid>https://geek-s.github.io/java-foundation/maven-plugin-flatten/</guid>
       <description>
         
           
@@ -59,10 +59,10 @@ resolveCiFriendliesOnly 仅处理revision、sha1、changelist变量
     
     <item>
       <title>MapStruct</title>
-      <link>https://geek-s.gitee.io/java-foundation/mapstruct/</link>
+      <link>https://geek-s.github.io/java-foundation/mapstruct/</link>
       <pubDate>Sat, 01 Jan 2022 20:55:28 +0800</pubDate>
       
-      <guid>https://geek-s.gitee.io/java-foundation/mapstruct/</guid>
+      <guid>https://geek-s.github.io/java-foundation/mapstruct/</guid>
       <description>
         
           
@@ -77,10 +77,10 @@ resolveCiFriendliesOnly 仅处理revision、sha1、changelist变量
     
     <item>
       <title>Lombok</title>
-      <link>https://geek-s.gitee.io/java-foundation/lombok/</link>
+      <link>https://geek-s.github.io/java-foundation/lombok/</link>
       <pubDate>Sat, 01 Jan 2022 20:54:28 +0800</pubDate>
       
-      <guid>https://geek-s.gitee.io/java-foundation/lombok/</guid>
+      <guid>https://geek-s.github.io/java-foundation/lombok/</guid>
       <description>
         
           
@@ -101,10 +101,10 @@ import lombok.AccessLevel; import lombok.Getter; import lombok.Setter; public cl
     
     <item>
       <title>Java Foundation</title>
-      <link>https://geek-s.gitee.io/java-foundation/java-foundation/</link>
+      <link>https://geek-s.github.io/java-foundation/java-foundation/</link>
       <pubDate>Sat, 01 Jan 2022 20:53:28 +0800</pubDate>
       
-      <guid>https://geek-s.gitee.io/java-foundation/java-foundation/</guid>
+      <guid>https://geek-s.github.io/java-foundation/java-foundation/</guid>
       <description>
         
           
